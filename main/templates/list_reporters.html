@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List reporters</title>
+    </head>
+    <body>
+        <h1>Reporters</h1>
+        <ul>
+            {% for reporter in reporters %}
+                <li>{{ reporter.name }}</li>
+            {% endfor %}
+        </ul>
+
+        <a href="{% url 'add_reporter' %}">Add reporter</a>
+    </body>
+</html>

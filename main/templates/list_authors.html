@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List authors</title>
+    </head>
+    <body>
+        <h1>Authors</h1>
+        {%for author in authors %}
+            <h2>{{ author.name }}</h2>
+            <p>{{ author.title }}</p>
+            <p>{{ author.birth_date }}</p>
+        {% endfor %}
+
+        <a href="{% url 'add_author' %}">Add author</a>
+    </form>
+    </body>
+</html>

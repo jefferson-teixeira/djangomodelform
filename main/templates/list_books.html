@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List books</title>
+    </head>
+    <body>
+        <h1>Books</h1>
+        {%for book in books %}
+            <h2>{{ book.name }}</h2>
+
+            {% for author in book.authors.all %}
+                <p>{{ author.name }}</p>
+            {% endfor %}
+        {% endfor %}
+
+        <a href="{% url 'add_book' %}">Add book</a>
+    </form>
+    </body>
+</html>
